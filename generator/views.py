@@ -4,10 +4,10 @@ import random
 # Create your views here.
 
 def about(request):
-    return render(request, 'generator/about.html')
+    return render(request, 'generator/about1.html')
 
 def home(request):
-    return render(request, 'generator/home.html')
+    return render(request, 'generator/home1.html')
 def password(request):
     generated_pass=''
 
@@ -28,4 +28,4 @@ def password(request):
 
 
 
-    return render(request,'generator/password.html',{'password':generated_pass})
+    return render(request, 'generator/password1.html', {'password':generated_pass})
