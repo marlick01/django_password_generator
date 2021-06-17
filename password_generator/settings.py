@@ -51,10 +51,15 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'password_generator.urls'
 
+import os.path
+
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(PROJECT_PATH, 'templates/'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
